@@ -34,10 +34,10 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            button1 = new Button();
+            textBoxYeniEposta = new TextBox();
+            textBoxYeniSifre = new TextBox();
+            textBoxYeniSifreTekrar = new TextBox();
+            buttonEpostaDegistir = new Button();
             button2 = new Button();
             button3 = new Button();
             SuspendLayout();
@@ -96,35 +96,36 @@
             label6.TabIndex = 1;
             label6.Text = "HESAPTAN CIKIŞ YAP";
             // 
-            // textBox1
+            // textBoxYeniEposta
             // 
-            textBox1.Location = new Point(313, 132);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(367, 27);
-            textBox1.TabIndex = 2;
+            textBoxYeniEposta.Location = new Point(313, 132);
+            textBoxYeniEposta.Name = "textBoxYeniEposta";
+            textBoxYeniEposta.Size = new Size(367, 27);
+            textBoxYeniEposta.TabIndex = 2;
             // 
-            // textBox2
+            // textBoxYeniSifre
             // 
-            textBox2.Location = new Point(313, 258);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(367, 27);
-            textBox2.TabIndex = 3;
+            textBoxYeniSifre.Location = new Point(313, 258);
+            textBoxYeniSifre.Name = "textBoxYeniSifre";
+            textBoxYeniSifre.Size = new Size(367, 27);
+            textBoxYeniSifre.TabIndex = 3;
             // 
-            // textBox3
+            // textBoxYeniSifreTekrar
             // 
-            textBox3.Location = new Point(313, 311);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(367, 27);
-            textBox3.TabIndex = 3;
+            textBoxYeniSifreTekrar.Location = new Point(313, 311);
+            textBoxYeniSifreTekrar.Name = "textBoxYeniSifreTekrar";
+            textBoxYeniSifreTekrar.Size = new Size(367, 27);
+            textBoxYeniSifreTekrar.TabIndex = 3;
             // 
-            // button1
+            // buttonEpostaDegistir
             // 
-            button1.Location = new Point(714, 123);
-            button1.Name = "button1";
-            button1.Size = new Size(130, 45);
-            button1.TabIndex = 4;
-            button1.Text = "E Posta Değiştir";
-            button1.UseVisualStyleBackColor = true;
+            buttonEpostaDegistir.Location = new Point(714, 123);
+            buttonEpostaDegistir.Name = "buttonEpostaDegistir";
+            buttonEpostaDegistir.Size = new Size(130, 45);
+            buttonEpostaDegistir.TabIndex = 4;
+            buttonEpostaDegistir.Text = "E Posta Değiştir";
+            buttonEpostaDegistir.UseVisualStyleBackColor = true;
+            buttonEpostaDegistir.Click += buttonEpostaDegistir_Click_1;
             // 
             // button2
             // 
@@ -134,6 +135,7 @@
             button2.TabIndex = 4;
             button2.Text = "Şifre Değiştir";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -154,10 +156,10 @@
             BackColor = Color.Transparent;
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(buttonEpostaDegistir);
+            Controls.Add(textBoxYeniSifreTekrar);
+            Controls.Add(textBoxYeniSifre);
+            Controls.Add(textBoxYeniEposta);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -179,10 +181,10 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private Button button1;
+        private TextBox textBoxYeniEposta;
+        private TextBox textBoxYeniSifre;
+        private TextBox textBoxYeniSifreTekrar;
+        private Button buttonEpostaDegistir;
         private Button button2;
         private Button button3;
     }

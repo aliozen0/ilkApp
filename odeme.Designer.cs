@@ -32,12 +32,12 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            button1 = new Button();
+            txtAdSoyad = new TextBox();
+            txtTelefon = new TextBox();
+            txtAdres = new TextBox();
+            radioPos = new RadioButton();
+            radioNakit = new RadioButton();
+            btnSiparisVer = new Button();
             SuspendLayout();
             // 
             // label1
@@ -77,71 +77,72 @@
             label4.TabIndex = 0;
             label4.Text = "ÖDEME YÖNTEMİ";
             // 
-            // textBox1
+            // txtAdSoyad
             // 
-            textBox1.Location = new Point(327, 71);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(251, 34);
-            textBox1.TabIndex = 1;
+            txtAdSoyad.Location = new Point(327, 71);
+            txtAdSoyad.Name = "txtAdSoyad";
+            txtAdSoyad.Size = new Size(251, 34);
+            txtAdSoyad.TabIndex = 1;
             // 
-            // textBox2
+            // txtTelefon
             // 
-            textBox2.Location = new Point(327, 141);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(251, 34);
-            textBox2.TabIndex = 1;
-            textBox2.TextChanged += textBox2_TextChanged;
+            txtTelefon.Location = new Point(327, 141);
+            txtTelefon.Name = "txtTelefon";
+            txtTelefon.Size = new Size(251, 34);
+            txtTelefon.TabIndex = 1;
+            txtTelefon.TextChanged += textBox2_TextChanged;
             // 
-            // textBox3
+            // txtAdres
             // 
-            textBox3.Location = new Point(327, 215);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(251, 34);
-            textBox3.TabIndex = 1;
-            textBox3.TextChanged += textBox3_TextChanged;
+            txtAdres.Location = new Point(327, 215);
+            txtAdres.Name = "txtAdres";
+            txtAdres.Size = new Size(251, 34);
+            txtAdres.TabIndex = 1;
+            txtAdres.TextChanged += textBox3_TextChanged;
             // 
-            // radioButton1
+            // radioPos
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(340, 294);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(209, 32);
-            radioButton1.TabIndex = 2;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "POS CİHAZI (KART)";
-            radioButton1.UseVisualStyleBackColor = true;
+            radioPos.AutoSize = true;
+            radioPos.Location = new Point(340, 294);
+            radioPos.Name = "radioPos";
+            radioPos.Size = new Size(209, 32);
+            radioPos.TabIndex = 2;
+            radioPos.TabStop = true;
+            radioPos.Text = "POS CİHAZI (KART)";
+            radioPos.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioNakit
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(340, 343);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(90, 32);
-            radioButton2.TabIndex = 2;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "NAKİT";
-            radioButton2.UseVisualStyleBackColor = true;
+            radioNakit.AutoSize = true;
+            radioNakit.Location = new Point(340, 343);
+            radioNakit.Name = "radioNakit";
+            radioNakit.Size = new Size(90, 32);
+            radioNakit.TabIndex = 2;
+            radioNakit.TabStop = true;
+            radioNakit.Text = "NAKİT";
+            radioNakit.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnSiparisVer
             // 
-            button1.Location = new Point(485, 426);
-            button1.Name = "button1";
-            button1.Size = new Size(185, 64);
-            button1.TabIndex = 3;
-            button1.Text = "SİPARİŞ VER";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnSiparisVer.Location = new Point(485, 426);
+            btnSiparisVer.Name = "btnSiparisVer";
+            btnSiparisVer.Size = new Size(185, 64);
+            btnSiparisVer.TabIndex = 3;
+            btnSiparisVer.Text = "SİPARİŞ VER";
+            btnSiparisVer.UseVisualStyleBackColor = true;
+            btnSiparisVer.Click += btnSiparisVer_Click;
             // 
             // odeme
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(button1);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            BackColor = Color.Transparent;
+            Controls.Add(btnSiparisVer);
+            Controls.Add(radioNakit);
+            Controls.Add(radioPos);
+            Controls.Add(txtAdres);
+            Controls.Add(txtTelefon);
+            Controls.Add(txtAdSoyad);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -150,6 +151,7 @@
             Margin = new Padding(4);
             Name = "odeme";
             Size = new Size(919, 580);
+            Load += odeme_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -160,11 +162,11 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
-        private Button button1;
+        private TextBox txtAdSoyad;
+        private TextBox txtTelefon;
+        private TextBox txtAdres;
+        private RadioButton radioPos;
+        private RadioButton radioNakit;
+        private Button btnSiparisVer;
     }
 }

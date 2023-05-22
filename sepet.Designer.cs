@@ -33,7 +33,6 @@
             label1 = new Label();
             lbl_ucret = new Label();
             label3 = new Label();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)sepetData).BeginInit();
             SuspendLayout();
             // 
@@ -46,7 +45,7 @@
             sepetData.BorderStyle = BorderStyle.None;
             sepetData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             sepetData.GridColor = SystemColors.Control;
-            sepetData.Location = new Point(274, 128);
+            sepetData.Location = new Point(251, 128);
             sepetData.Name = "sepetData";
             sepetData.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -59,7 +58,7 @@
             sepetData.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             sepetData.RowHeadersWidth = 51;
             sepetData.RowTemplate.Height = 50;
-            sepetData.Size = new Size(431, 343);
+            sepetData.Size = new Size(454, 343);
             sepetData.TabIndex = 0;
             // 
             // label1
@@ -92,20 +91,11 @@
             label3.TabIndex = 3;
             label3.Text = "SEPETİM";
             // 
-            // button1
-            // 
-            button1.Location = new Point(761, 152);
-            button1.Name = "button1";
-            button1.Size = new Size(104, 54);
-            button1.TabIndex = 4;
-            button1.Text = "Sepetten Çıkar";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // sepet
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(button1);
+            BackColor = Color.Transparent;
             Controls.Add(label3);
             Controls.Add(lbl_ucret);
             Controls.Add(label1);
@@ -124,6 +114,5 @@
         private Label label1;
         private Label lbl_ucret;
         private Label label3;
-        private Button button1;
     }
 }

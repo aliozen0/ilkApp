@@ -102,21 +102,22 @@ namespace ilkApp
                 if (result == DialogResult.Yes)
                 {
                     int selectedRowIndex = e.RowIndex;
-                    string yemekID = sepetData.Rows[selectedRowIndex].Cells["yemekID"].Value.ToString();
+                    int yemekID = Convert.ToInt32(sepetData.Rows[selectedRowIndex].Cells["yemekID"].Value);
+
                     DeleteRowFromDatabase(yemekID);
                     LoadData();
                 }
             }
         }
 
-        private void DeleteRowFromDatabase(string yemekID)
+        private void DeleteRowFromDatabase(int yemekID)
         {
             try
             {
                 baglanti = new SqlConnection(@"Data Source=ACER-58G\SQLEXPRESS;Initial Catalog=ikinci;Integrated Security=True");
                 baglanti.Open();
 
-                SqlCommand sqlKomut = new SqlCommand("DELETE FROM sepetim2 WHERE yemekID = @yemekID", baglanti);
+                SqlCommand sqlKomut = new SqlCommand("DELETE TOP(1) FROM sepetim2 WHERE yemekID = @yemekID", baglanti);
                 sqlKomut.Parameters.AddWithValue("@yemekID", yemekID);
                 sqlKomut.ExecuteNonQuery();
             }

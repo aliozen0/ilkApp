@@ -10,9 +10,15 @@ namespace ilkApp
         private DataTable dataTable;
         private SqlConnection baglanti = null;
         private SqlConnection connection = null;
-        public Form1()
+        private string kullaniciID;
+
+        public string KullaniciID { get => kullaniciID; set => kullaniciID = value; }
+
+        public Form1(string kullaniciID)
         {
+
             InitializeComponent();
+            this.kullaniciID = kullaniciID;
             odeme1.Hide();
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -21,6 +27,7 @@ namespace ilkApp
             yemeklerData.CellClick += yemeklerData_CellClick;
             connection = new SqlConnection(@"Data Source=ACER-58G\SQLEXPRESS;Initial Catalog=ikinci;Integrated Security=True");
             connection.Open();
+            lbl_deneme.Text = kullaniciID.ToString();
             LoadData();
         }
 
@@ -157,6 +164,7 @@ namespace ilkApp
             hesap1.Hide();
             anasayfa1.Hide();
             yemeklerData.Hide();
+            button9.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -200,6 +208,17 @@ namespace ilkApp
                 label1.Text = yemekAdi + " sepete eklendi";
             }
 
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+       
+        private void Form1_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+           
+            
         }
     }
 }

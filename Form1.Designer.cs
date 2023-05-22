@@ -49,6 +49,8 @@
             odeme1 = new odeme();
             button9 = new Button();
             yemeklerData = new DataGridView();
+            lbl_deneme = new Label();
+            button14 = new Button();
             ((System.ComponentModel.ISupportInitialize)yemeklerData).BeginInit();
             SuspendLayout();
             // 
@@ -205,17 +207,19 @@
             // 
             // sepet1
             // 
-            sepet1.Location = new Point(189, 95);
+            sepet1.BackColor = Color.Transparent;
+            sepet1.Location = new Point(202, 95);
             sepet1.Name = "sepet1";
-            sepet1.Size = new Size(945, 572);
+            sepet1.Size = new Size(821, 572);
             sepet1.TabIndex = 6;
             sepet1.Visible = false;
             sepet1.Load += sepet1_Load;
             // 
             // odeme1
             // 
+            odeme1.BackColor = Color.Transparent;
             odeme1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            odeme1.Location = new Point(294, 129);
+            odeme1.Location = new Point(277, 117);
             odeme1.Margin = new Padding(4);
             odeme1.Name = "odeme1";
             odeme1.Size = new Size(716, 538);
@@ -225,7 +229,7 @@
             // button9
             // 
             button9.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            button9.Location = new Point(1029, 618);
+            button9.Location = new Point(1029, 559);
             button9.Name = "button9";
             button9.Size = new Size(157, 49);
             button9.TabIndex = 8;
@@ -250,11 +254,32 @@
             yemeklerData.Visible = false;
             yemeklerData.CellContentClick += yemeklerData_CellContentClick;
             // 
+            // lbl_deneme
+            // 
+            lbl_deneme.AutoSize = true;
+            lbl_deneme.Location = new Point(33, 31);
+            lbl_deneme.Name = "lbl_deneme";
+            lbl_deneme.Size = new Size(50, 20);
+            lbl_deneme.TabIndex = 10;
+            lbl_deneme.Text = "label2";
+            // 
+            // button14
+            // 
+            button14.Location = new Point(32, 622);
+            button14.Name = "button14";
+            button14.Size = new Size(101, 54);
+            button14.TabIndex = 11;
+            button14.Text = "Uygulamayı Kapat";
+            button14.UseVisualStyleBackColor = true;
+            button14.Click += button14_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1198, 679);
+            Controls.Add(button14);
+            Controls.Add(lbl_deneme);
             Controls.Add(yemeklerData);
             Controls.Add(button9);
             Controls.Add(odeme1);
@@ -278,6 +303,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Sipariş UYgulaması";
+            FormClosing += Form1_FormClosing_1;
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)yemeklerData).EndInit();
             ResumeLayout(false);
@@ -306,5 +332,7 @@
         public odeme odeme1;
         private Button button9;
         private DataGridView yemeklerData;
+        private Label lbl_deneme;
+        private Button button14;
     }
 }
